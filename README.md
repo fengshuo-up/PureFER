@@ -1,5 +1,7 @@
 1.structure：
+
 PureFER/
+
 ├── checkpoints/             # 预训练模型权重及评估可视化图表 (CAM/混淆矩阵)
 
 │   ├── rafdb_acc0.8985.pth  # RAF-DB 最优权重
