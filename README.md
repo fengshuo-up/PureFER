@@ -1,21 +1,37 @@
 1.structure：
 PureFER/
 ├── checkpoints/             # 预训练模型权重及评估可视化图表 (CAM/混淆矩阵)
+
 │   ├── rafdb_acc0.8985.pth  # RAF-DB 最优权重
+
 │   ├── FERPlus_acc0.9126.pth# FERPlus 最优权重
+
 │   ├── affectnet7...        # AffectNet 相关权重及曲线图 (.png/.svg)
+
 ├── networks/                # 模型核心架构代码
+
 │   ├── DDCM.py              # 双域压缩模块 (Spatial & Channel Compression)
+
 │   └── MixedFeatureNet.py   # 混合特征主干网络
+
 ├── pretrained/              # 预训练基础权重存放目录
+
 │   └── MFN_msceleb.pth      # Ms-Celeb-1M 上的骨干预训练权重
+
 ├── affectnet_train.py       # AffectNet 数据集训练脚本
+
 ├── affectnet_test.py        # AffectNet 数据集测试脚本
+
 ├── ferPlus_train.py         # FERPlus 数据集训练脚本
+
 ├── ferplus_confusion.py     # FERPlus 混淆矩阵生成及可视化脚本
+
 ├── rafdb_train.py           # RAF-DB 数据集训练脚本
+
 ├── rafdb_test.py            # RAF-DB 数据集测试脚本
+
 └── sam.py                   # Sharpness-Aware Minimization (SAM) 优化器
+
 2.Installation：
 git clone https://github.com/yourusername/PureFER.git
 cd PureFER
