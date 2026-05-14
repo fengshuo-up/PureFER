@@ -1,5 +1,7 @@
 # PureFER
 
+> **Note**: The full source code of this project is located in the `master` branch.
+
 ## Citation
 If you find this project useful for your research, please cite our paper:
 
@@ -7,7 +9,6 @@ If you find this project useful for your research, please cite our paper:
 Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthogonal Competitive Attention for Edge Deployment. The Visual Computer.
 
 ### BibTeX
-```bibtex
 @article{PureFER2026,
   title={Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthogonal Competitive Attention for Edge Deployment},
   journal={The Visual Computer},
