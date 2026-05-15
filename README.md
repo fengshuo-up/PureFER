@@ -13,7 +13,7 @@ The datasets include:
 - FERPlus
 - AffectNet
 
-## 🛠️ Requirements & Dependencies
+##  Requirements & Dependencies
 
 The experiments were conducted using **PyTorch 2.5.1** on a single NVIDIA RTX 4060 (8GB) GPU. The environment can be easily set up using the provided `requirements.txt`.
 
@@ -35,10 +35,11 @@ pip install torch==2.5.1 torchvision torchaudio --index-url [https://download.py
 
 # Install the rest of the required dependencies
 pip install -r requirements.txt
+```
 
 ## 🧠 Core Architecture & Implementation
 
-PureFER follows a highly efficient **"compress-then-enhance"** design paradigm. The core logical components are entirely implemented in [`networks/DDAM2.py`](./networks/DDAM2.py).
+PureFER follows a highly efficient **"compress-then-enhance"** design paradigm. The core logical components are entirely implemented in [`networks/DDCM.py`](./networks/DDCM.py).
 
 ### 1. DDCM (Dual-Domain Compression Module)
 The DDCM is designed to eliminate feature redundancy through joint spatial and channel optimization under strict computational constraints.
