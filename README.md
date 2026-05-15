@@ -73,5 +73,4 @@ Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthog
   year={2026}
   
   doi={https://doi.org/10.5281/zenodo.20174388}
-  
-}
+  }
