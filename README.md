@@ -37,8 +37,8 @@ PureFER/
 
 2.Installation：
 
-git clone https://github.com/yourusername/PureFER.git
-
+git clone https://github.com/fengshuo-up/PureFER.git
+fengshuo-up
 cd PureFER
 
 #Install dependencies (PyTorch 2.5.1 & compatible CUDA)
