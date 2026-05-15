@@ -36,6 +36,24 @@ pip install torch==2.5.1 torchvision torchaudio --index-url [https://download.py
 # Install the rest of the required dependencies
 pip install -r requirements.txt
 
+## 🧠 Core Architecture & Implementation
+
+PureFER follows a highly efficient **"compress-then-enhance"** design paradigm. The core logical components are entirely implemented in [`networks/DDAM2.py`](./networks/DDAM2.py).
+
+### 1. DDCM (Dual-Domain Compression Module)
+The DDCM is designed to eliminate feature redundancy through joint spatial and channel optimization under strict computational constraints.
+* **SCU (Spatial Compression Unit):** Adopts a "Separation-Reconstruction" strategy. It leverages the statistical properties of Group Normalization (GN) to decouple features into informative and redundant subsets. It then applies cross-fusion to compress the spatial dimensions while preserving critical semantics.
+  * 💻 *Code Mapping:* Implemented as `class SCU(nn.Module)` in `networks/DDCM.py`.
+* **CCU (Channel Compression Unit):** Adopts a "Split-Transform-Fuse" paradigm. It splits the compressed features along the channel dimension, applies asymmetric dual-path transformations (using GWC and PWC), and dynamically merges them using an adaptive SK-like attention mechanism.
+  * 💻 *Code Mapping:* Implemented as `class CCU(nn.Module)` in `networks/DDCM.py`.
+
+### 2. OCA (Orthogonal Competitive Attention)
+The OCA mechanism is explicitly designed to capture long-range dependencies and precisely localize discriminative facial Action Units (AUs) while suppressing background noise.
+* **OCU (Orthogonal Competitive Unit):** Decomposes input features orthogonally into horizontal and vertical paths. It utilizes Global Depth-wise Convolutions (GDConv) to aggregate global contextual information with a minimal parameter footprint.
+  * 💻 *Code Mapping:* Implemented as `class OCU(nn.Module)` in `networks/DDCM.py`.
+* **Competitive Selection:** Multiple parallel OCUs generate independent candidate attention maps. Driven by our proposed Region Focus Loss ($L_{RF}$), an element-wise `MAX` operation competitively selects the most discriminative regional responses for final feature recalibration.
+  * 💻 *Code Mapping:* Implemented as `class OCA(nn.Module)` in `networks/DDCM.py`.
+
 ## Citation
 If you find this project useful for your research, please cite our paper:
 
