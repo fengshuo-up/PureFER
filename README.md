@@ -13,6 +13,29 @@ The datasets include:
 - FERPlus
 - AffectNet
 
+## Requirements & Dependencies
+- PyTorch 2.5.1
+
+# Deep Learning Framework
+torch==2.5.1
+torchvision>=0.20.1  
+
+# Face Detection & Preprocessing
+retina-face
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# Visualization & Metrics
+scikit-learn>=1.0.2 
+matplotlib>=3.5.0
+seaborn>=0.11.2      
+grad-cam>=1.4.6      
+
+# Utilities
+numpy>=1.21.0
+tqdm>=4.62.0
+pandas>=1.3.0
+
 ## Citation
 If you find this project useful for your research, please cite our paper:
 
@@ -25,4 +48,5 @@ Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthog
   journal={The Visual Computer},
   author={shuo Feng, Ruisheng Jia, Hongmei Sun, shaung Yang, qing Sun},
   year={2026}
+  doi={https://doi.org/10.5281/zenodo.20174388}
 }
