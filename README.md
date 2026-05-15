@@ -63,9 +63,15 @@ Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthog
 
 ### BibTeX
 @article{PureFER2026,
+
   title={Lightweight Facial Expression Recognition via Dual-Domain Compression and Orthogonal Competitive Attention for Edge Deployment},
+  
   journal={The Visual Computer},
+  
   author={shuo Feng, Ruisheng Jia, Hongmei Sun, shaung Yang, qing Sun},
+  
   year={2026}
+  
   doi={https://doi.org/10.5281/zenodo.20174388}
+  
 }
