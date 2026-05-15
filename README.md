@@ -13,7 +13,7 @@ The datasets include:
 - FERPlus
 - AffectNet
 
-## Requirements & Dependencies
+# Requirements & Dependencies
 - PyTorch 2.5.1
 
 # Deep Learning Framework
@@ -35,6 +35,29 @@ grad-cam>=1.4.6
 numpy>=1.21.0
 tqdm>=4.62.0
 pandas>=1.3.0
+
+## 🛠️ Requirements & Dependencies
+
+The experiments were conducted using **PyTorch 2.5.1** on a single NVIDIA RTX 4060 (8GB) GPU. The environment can be easily set up using the provided `requirements.txt`.
+
+### 1. Prerequisites
+- Python 3.8 or higher
+- CUDA 11.8 / 12.1 or higher (matching your PyTorch version)
+
+### 2. Installation
+We recommend using [Anaconda](https://www.anaconda.com/) to create a virtual environment:
+
+```bash
+# Create and activate a new conda environment
+conda create -n purefer python=3.9 -y
+conda activate purefer
+
+# Install PyTorch (Please adjust the CUDA version according to your local machine)
+# Example for CUDA 12.1:
+pip install torch==2.5.1 torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu121](https://download.pytorch.org/whl/cu121)
+
+# Install the rest of the required dependencies
+pip install -r requirements.txt
 
 ## Citation
 If you find this project useful for your research, please cite our paper:
